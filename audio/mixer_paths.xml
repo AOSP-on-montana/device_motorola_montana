@@ -515,6 +515,10 @@
         <ctl name="PRI_MI2S_RX Port Mixer INTERNAL_FM_TX" value="1" />
     </path>
 
+    <path name="play-fm speaker">
+        <path name="play-fm" />
+    </path>
+
     <path name="vowlan-call">
         <ctl name="PRI_MI2S_RX_Voice Mixer VoWLAN" value="1" />
         <ctl name="VoWLAN_Tx Mixer TERT_MI2S_TX_VoWLAN" value="1" />
