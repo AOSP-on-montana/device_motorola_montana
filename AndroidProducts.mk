@@ -15,9 +15,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_montana.mk
+    $(LOCAL_DIR)/aosp_montana.mk \
+    $(LOCAL_DIR)/montana.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_montana-user \
     aosp_montana-userdebug \
-    aosp_montana-eng
+    aosp_montana-eng \
+    montana-user \
+    montana-userdebug \
+    montana-eng
