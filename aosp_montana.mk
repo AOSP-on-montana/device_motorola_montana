@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := motorola
 PRODUCT_NAME := aosp_montana
 PRODUCT_DEVICE := montana
-PRODUCT_MODEL := AOSP on montana
+PRODUCT_MODEL := Moto G (5S)
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
