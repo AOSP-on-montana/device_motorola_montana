@@ -20,10 +20,8 @@ TARGET_OTA_ASSERT_DEVICE := montana
 TARGET_SCREEN_DENSITY := 420
 
 # Kernel
-TARGET_CUSTOM_DTBTOOL := dtbTool_custom
-BOARD_DTBTOOL_ARGS := --force-v3 --motorola 1
-TARGET_KERNEL_CONFIG := montana_defconfig
-TARGET_KERNEL_RECOVERY_CONFIG := montana_recovery_defconfig
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(wildcard device/motorola/montana-kernel/*.ko)
 
 # NFC
 NXP_CHIP_TYPE := pn554
