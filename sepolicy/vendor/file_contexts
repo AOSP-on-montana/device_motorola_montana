@@ -1,6 +1,3 @@
 # Fingerprint
 /data/\.fps(/.*)?                                         u:object_r:fingerprint_data_file:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-fpcservice u:object_r:hal_fingerprint_default_exec:s0
-
-# Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.montana u:object_r:hal_lineage_touch_default_exec:s0

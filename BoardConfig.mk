@@ -11,13 +11,9 @@ DEVICE_PATH := device/motorola/montana
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := montana
 
 # Display
 TARGET_SCREEN_DENSITY := 420
-
-# HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 TARGET_CUSTOM_DTBTOOL := dtbTool_custom
