@@ -36,6 +36,29 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_DT),)
+    LOCAL_DT := device/motorola/montana-kernel/dt.img
+else
+    LOCAL_DT := $(TARGET_PREBUILT_DT)
+endif
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+    LOCAL_KERNEL := device/motorola/montana-kernel/Image.gz
+else
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+ifeq ($(TARGET_PREBUILT_RECOVERY_KERNEL),)
+    LOCAL_RECOVERY_KERNEL := device/motorola/montana-kernel/recovery/Image.gz
+else
+    LOCAL_RECOVERY_KERNEL := $(TARGET_PREBUILT_RECOVERY_KERNEL)
+endif
+PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/montana-kernel/msm8937/kernel-headers
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_DT):dt.img \
+    $(LOCAL_KERNEL):kernel \
+    $(LOCAL_RECOVERY_KERNEL):recovery_kernel
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
