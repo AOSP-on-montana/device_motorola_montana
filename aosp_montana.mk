@@ -18,3 +18,6 @@ PRODUCT_DEVICE := montana
 PRODUCT_MODEL := Moto G (5S)
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# Match stock build fingerprint
+PRODUCT_OVERRIDE_FINGERPRINT := motorola/montana/montana:8.1.0/OPPS28.65-37-7-11/7f8a6:user/release-keys
