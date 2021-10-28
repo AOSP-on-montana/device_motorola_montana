@@ -1,22 +1,21 @@
-on init && property:ro.boot.hardware.sku=XT1793
-    setprop ro.boot.product.hardware.sku n
-
-on init && property:ro.boot.hardware.sku=XT1794
-    setprop ro.boot.product.hardware.sku n
-
-on init && property:ro.boot.hardware.sku=XT1797
-    setprop ro.boot.product.hardware.sku n
-
-on init && property:ro.boot.hardware.sku=XT1799-2
-    setprop ro.boot.product.hardware.sku n
-    mount none /vendor/etc/libnfc-nxp_retcn.conf /vendor/etc/libnfc-nxp.conf bind
-
 on init
     # Change ownership for Pocketmode feature
     chown system system /sys/bus/spi/devices/spi1.0/proximity_state
     chmod 0660 /sys/bus/spi/devices/spi1.0/proximity_state
 
-on boot && property:ro.boot.product.hardware.sku=n
+    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
+
+on boot && property:ro.boot.product.hardware.sku=XT1793
+    start vendor.nfc_hal_service
+
+on boot && property:ro.boot.product.hardware.sku=XT1794
+    start vendor.nfc_hal_service
+
+on boot && property:ro.boot.product.hardware.sku=XT1797
+    start vendor.nfc_hal_service
+
+on boot && property:ro.boot.product.hardware.sku=XT1799-2
+    mount none /vendor/etc/libnfc-nxp_retcn.conf /vendor/etc/libnfc-nxp.conf bind
     start vendor.nfc_hal_service
 
 on boot
