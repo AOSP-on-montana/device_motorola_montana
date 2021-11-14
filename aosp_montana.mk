@@ -19,5 +19,6 @@ PRODUCT_MODEL := Moto G (5S)
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
-# Match stock build fingerprint
+# Match stock build fingerprint and security patch
 PRODUCT_OVERRIDE_FINGERPRINT := motorola/montana_ora_n/montana:8.1.0/OPPS28.65-37-7-12/073f74:user/release-keys
+PRODUCT_OVERRIDE_SECURITY_PATCH := 2019-08-01
