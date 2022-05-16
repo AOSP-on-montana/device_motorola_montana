@@ -856,7 +856,7 @@
 
     <path name="speaker">
         <ctl name="AMP Audio Gain" value="17" />
-        <ctl name="OSPL Rx" value="Enable" />
+        <!--ctl name="OSPL Rx" value="Enable" /-->
     </path>
 
    <path name="speaker-mic">
